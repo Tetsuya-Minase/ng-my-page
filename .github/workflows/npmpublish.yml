@@ -28,6 +28,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm run deploy:only
+      - run: |
+          npm install
+          npm run deploy:only
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
