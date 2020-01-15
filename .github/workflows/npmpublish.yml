@@ -18,7 +18,7 @@ jobs:
           node-version: 12
       - run: |
           npm install
-          npm generate
+          npm run generate
 
   deploy:
     needs: build
@@ -28,6 +28,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm deploy:only
+      - run: npm run deploy:only
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
