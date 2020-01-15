@@ -1,8 +1,12 @@
-name: Node.js Package
+name: ng-my-page-flow
 
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -12,7 +16,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm generate
+      - run: |
+          npm install
+          npm generate
 
   deploy:
     needs: build
