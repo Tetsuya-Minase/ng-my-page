@@ -33,7 +33,4 @@ jobs:
           npm install
           npm run generate
           ls -l
-      - name: deploy
-        run: |
-          ls -l
           npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
