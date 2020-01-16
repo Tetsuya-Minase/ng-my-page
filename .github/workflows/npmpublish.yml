@@ -37,6 +37,6 @@ jobs:
       - name: deploy
         run: |
           ls -l
-          npm run deploy:only -- --token=&FIREBASE_TOKEN
+          npm run deploy:only -- --token=$FIREBASE_TOKEN
         env:
           $FIREBASE_TOKEN: ${{secrets.FIREBASE_TOKEN}}
