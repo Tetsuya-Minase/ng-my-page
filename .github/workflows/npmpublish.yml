@@ -21,6 +21,7 @@ jobs:
           npm run generate
 
   deploy:
+    name: deploy
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -34,6 +35,7 @@ jobs:
           npm run generate
       - name: deploy
         run: |
+          ls -l
           npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
