@@ -30,6 +30,7 @@ jobs:
           node-version: 12
       - run: |
           npm install
+          npm run generate
           npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
