@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - uses: ./
       - name: setup
         uses: actions/setup-node@v1
         with:
@@ -23,7 +24,8 @@ jobs:
         run: |
           npm run generate
           ls -l
-          ls -l dist/*
+          echo "-------------------"
+          ls -l ng-my-page
 
       - name: deploy
         run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
