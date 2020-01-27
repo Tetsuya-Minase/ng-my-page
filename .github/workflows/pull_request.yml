@@ -13,8 +13,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: |
-          npm install
-          npm run generate
-          ls -l
-          npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
+      - name: install package
+          uses: ./
+          run: |
+            npm install
+            npm run generate
+            ls -l
+            npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
