@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "scully": "scully",
+    "scully": "npx scully",
     "clean": "rimraf ./public",
     "generate": "run-s clean build scully",
     "deploy": "run-s generate deploy:only",
