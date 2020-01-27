@@ -30,7 +30,7 @@ jobs:
           node-version: 12
       - name: build
         run: |
-          npm install
-          npm run generate
-          ls -l
-          npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
+          #          npm install
+          #          npm run generate
+               ls -l
+               npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
