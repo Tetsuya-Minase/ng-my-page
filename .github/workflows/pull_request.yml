@@ -23,6 +23,7 @@ jobs:
         run: |
           npm run generate
           ls -l
+          ls -l dist
 
       - name: deploy
         run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
