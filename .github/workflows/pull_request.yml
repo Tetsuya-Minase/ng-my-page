@@ -10,11 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: |
-          npm install
-          npm run generate
-          ls -l
-          npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
+
+      - name: setup
+          uses: actions/setup-node@v1
+          with:
+            node-version: 12
+
+      - name: install
+          run: npm install
+
+      - name: build
+          run: |
+            npm run generate
+            ls -l
+
+      - name: deploy
+          run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
