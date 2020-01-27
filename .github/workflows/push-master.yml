@@ -1,0 +1,23 @@
+name: ng-my-page-push-master
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    name: deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: build
+        run: |
+          npm install
+          npm run generate
+          ls -l
+          npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
