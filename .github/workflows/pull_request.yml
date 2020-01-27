@@ -15,8 +15,8 @@ jobs:
         with:
           node-version: 12
       - uses: ./
-          run: |
-            npm install
-            npm run generate
-            ls -l
-            npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
+      - run: |
+          npm install
+          npm run generate
+          ls -l
+          npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
