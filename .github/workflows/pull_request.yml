@@ -12,17 +12,17 @@ jobs:
       - uses: actions/checkout@v1
 
       - name: setup
-          uses: actions/setup-node@v1
-          with:
-            node-version: 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
 
       - name: install
-          run: npm install
+        run: npm install
 
       - name: build
-          run: |
-            npm run generate
-            ls -l
+        run: |
+          npm run generate
+          ls -l
 
       - name: deploy
-          run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
+        run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
