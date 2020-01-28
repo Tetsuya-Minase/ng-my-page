@@ -20,8 +20,8 @@ jobs:
         run: npm install
 
       - name: build
-        working-directory: ./
         run: |
+          pwd
           npm run generate
           ls -l
           echo "-------------------"
