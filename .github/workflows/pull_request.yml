@@ -18,11 +18,6 @@ jobs:
 
       - name: install
         run: npm install
-
+      # build通ること確認
       - name: build
-        run: |
-          npm run generate
-          ls -l
-
-      - name: deploy
-        run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
+        run: npm run generate
