@@ -21,11 +21,8 @@ jobs:
 
       - name: build
         run: |
-          pwd
           npm run generate
           ls -l
-          echo "-------------------"
-          ls -l ng-my-page
 
       - name: deploy
         run: npm run deploy:only -- --token=${{secrets.FIREBASE_TOKEN}}
