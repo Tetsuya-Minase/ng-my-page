@@ -1,2 +1,5 @@
-const config = require('./scully.config.js');
-exports.config = config.config;
+exports.config = {
+  projectRoot: './src/app',
+  outDir: './public',
+  routes: {}
+};
