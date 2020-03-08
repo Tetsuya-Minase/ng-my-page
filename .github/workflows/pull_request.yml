@@ -22,10 +22,7 @@ jobs:
       # build通ること確認
       - name: build
         timeout-minutes: 5
-        run: |
-          npm run clean
-          npm run build
-          npm run scully
+        run: npm run generate
 
       - name: slack-notice-failure
         if: failure()
