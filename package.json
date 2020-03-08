@@ -11,7 +11,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "scully": "scully",
-    "clean": "rimraf ./public",
+    "clean": "rimraf ./public && rimraf ./dist",
     "generate": "run-s clean build scully",
     "deploy": "run-s generate deploy:only",
     "deploy:only": "firebase deploy"
