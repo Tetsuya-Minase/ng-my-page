@@ -1288,10 +1288,10 @@
     semver "6.3.0"
     semver-intersect "1.4.0"
 
-"@scullyio/init@0.0.23":
-  version "0.0.23"
-  resolved "https://registry.yarnpkg.com/@scullyio/init/-/init-0.0.23.tgz#2bfda13e7874fe7329370c8b2774edb87097f686"
-  integrity sha512-4eeKOLwOgk0a3Jc785uPYljo+1ySXJv/pEI5g33loU5q9p184b0gRTFX1a+Vyvw2ZWQYoGSDLp7VjZu95Lh2yg==
+"@scullyio/init@1.0.0-beta.0":
+  version "1.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/@scullyio/init/-/init-1.0.0-beta.0.tgz#d8bb03a4d046f08960c147db29f2458c2beae24a"
+  integrity sha512-5qyJu0xslwObcxyiXMWUlNkTxyjrcycNJL2Ew76eUnKP3kv7gDcNuAOsKtQpk8flLJsR9ijP0Yl++1KAS8Nhfw==
   dependencies:
     "@angular-devkit/core" "^9.0.0-rc.5"
     "@angular-devkit/schematics" "^9.0.0-rc.5"
