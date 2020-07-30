@@ -2,7 +2,6 @@
 @import "../../../../common/style/variable";
 
 @mixin column {
-  height: 16rem;
   margin: 0.5rem 0 0 0.5rem;
 }
 
@@ -47,15 +46,9 @@
   margin: 2rem 0.5rem 0.5rem 0.5rem;
 }
 
-.skill__detail {
-  background-color: $white;
-  border-radius: $radius;
-  margin: 0.5rem 0 0 0;
-  padding: 1.6rem;
-}
-
 .skill__item {
   @include column;
+  @include box;
 }
 
 .skill__list {

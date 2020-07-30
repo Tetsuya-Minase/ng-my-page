@@ -1,44 +1,39 @@
 <section class="skill">
   <heading text="Skills"></heading>
-  <div class="skill__detail">
-    <article class="skill__item">
-      <heading text="Language" level="2"></heading>
-      <div class="skill__list">
-        <ng-container *ngFor="let item of languageList">
-          <article class="skill__list__item">
-            <heading [text]="item.skill" level="2" isHidden="true"></heading>
-            <img [src]="item.icon" [alt]="item.skill"
-                 class="skill__icon">
-          </article>
-        </ng-container>
-      </div>
-    </article>
-    <article>
-      <heading text="Framework" level="2"></heading>
-      <article class="skill__item">
-        <heading text="FrontEnd" level="3"></heading>
-        <div class="skill__list">
-          <ng-container *ngFor="let item of frontendFrameworkList">
-            <article class="skill__list">
-              <heading [text]="item.skill" level="4" isHidden="true"></heading>
-              <img [src]="item.icon" [alt]="item.skill"
-                   class="skill__icon">
-            </article>
-          </ng-container>
-        </div>
-      </article>
-      <article class="skill__item">
-        <heading text="BackEnd" level="3"></heading>
-        <div class="skill__list">
-          <ng-container *ngFor="let item of backendFrameworkList">
-            <article class="skill__list">
-              <heading [text]="item.skill" level="4" isHidden="true"></heading>
-              <img [src]="item.icon" [alt]="item.skill"
-                   class="skill__icon">
-            </article>
-          </ng-container>
-        </div>
-      </article>
-    </article>
-  </div>
+  <article class="skill__item">
+    <heading level="2" text="Language"></heading>
+    <div class="skill__list">
+      <ng-container *ngFor="let item of languageList">
+        <section class="skill__list__item">
+          <heading [text]="item.skill" isHidden="true" level="2"></heading>
+          <img [alt]="item.skill" [src]="item.icon"
+               class="skill__icon">
+        </section>
+      </ng-container>
+    </div>
+  </article>
+  <article class="skill__item">
+    <heading level="3" text="FrontEndFramework"></heading>
+    <div class="skill__list">
+      <ng-container *ngFor="let item of frontendFrameworkList">
+        <section class="skill__list">
+          <heading [text]="item.skill" isHidden="true" level="4"></heading>
+          <img [alt]="item.skill" [src]="item.icon"
+               class="skill__icon">
+        </section>
+      </ng-container>
+    </div>
+  </article>
+  <article class="skill__item">
+    <heading level="3" text="BackEndFramework"></heading>
+    <div class="skill__list">
+      <ng-container *ngFor="let item of backendFrameworkList">
+        <article class="skill__list">
+          <heading [text]="item.skill" isHidden="true" level="4"></heading>
+          <img [alt]="item.skill" [src]="item.icon"
+               class="skill__icon">
+        </article>
+      </ng-container>
+    </div>
+  </article>
 </section>
