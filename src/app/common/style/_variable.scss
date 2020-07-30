@@ -59,3 +59,10 @@ $tab-min-width: 600px;
   padding: 0;
   position: absolute;
 }
+
+@mixin box {
+  min-height: 20rem;
+  border: 0.05rem solid #979797;
+  border-radius: 1rem;
+  box-shadow: 0.1rem 0.1rem 0.2rem #333333;
+}
