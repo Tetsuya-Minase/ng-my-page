@@ -2,7 +2,7 @@
 @import "../../../../common/style/variable";
 
 @mixin column {
-  margin: 0.5rem 0 0 0.5rem;
+  margin: 1rem 0 0 1rem;
 }
 
 @mixin list {
@@ -44,6 +44,11 @@
 
 .skill {
   margin: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+.flexWrapper {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .skill__item {
